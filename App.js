@@ -20,10 +20,13 @@ import { Navigation } from 'react-native-navigation';
 import WelcomePage from './src/WelcomePage';
 import MyPage from './src/MyPage';
 import HomePage from './src/HomePage';
+import HomeDetail from './src/HomeDetail';
 
 Navigation.registerComponent('navigation.WelcomePage', () => WelcomePage);
 Navigation.registerComponent('navigation.MyPage', () => MyPage);
 Navigation.registerComponent('navigation.HomePage', () => HomePage);
+Navigation.registerComponent('navigation.HomeDetail', () => HomeDetail);
+
 
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
@@ -35,8 +38,18 @@ Navigation.events().registerAppLaunchedListener(() => {
               children:[
                 {
                   component: {
+                    id:'HomePageID',
                     name: 'navigation.HomePage',
-                    passProps: 'HomePage...',
+                    passProps: {
+                      componentId:'HomePageID'
+                    },
+                    options :{
+                      topBar: {
+                        title:{
+                          text:'首页'
+                        }
+                      }
+                    }
                   }
                 }
               ],
