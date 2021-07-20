@@ -12,7 +12,7 @@
   "dependencies": {
     "autobind-decorator": "^2.4.0",
     "react": "16.9.0",
-    "react-native": "0.61.4",
+    "react-native": "0.62.3",
     "react-native-navigation": "^3.6.0"
   },
   "devDependencies": {
